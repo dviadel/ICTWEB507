@@ -1,11 +1,28 @@
-<h1><?php print hello() ?></h1>
+<?php 
 
-<ul>
-<?php  while (have_posts()) : the_post();?>
-	<li>
+$animals = [
+  'cat',
+  'dog',
+  'bunny',
+  'turtle',
+  'koala',
+  'elephant',
+  'hipo',
+  'bird',
+  'mamal'
+]; 
 
-		<?php the_title()?>		
-		<?php the_excerpt()?>
-	</li>
-<?php endwhile?>
-</ul>
+function toaster($thing){
+
+echo '<li>' . 'toasting ' . $thing . '.</li>';
+
+}
+
+echo '<ul>';
+foreach($animals as $animal){
+	toaster($animal);
+}
+echo '</ul>';
+
+
+?>

@@ -1,0 +1,27 @@
+body {
+    font-family: ariel;
+}
+
+
+.row {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 1em;
+    flex-basis: 300px;
+  
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    box-shadow: 0 0 5px 0 orange
+}

@@ -1,28 +1,25 @@
-<?php 
+<html>
+	<head>
+	<title>My Title</title>
+	<link rel="stylesheet" href="<?php echo get_stylesheet_uri()?>" type="text/css" />
 
-$animals = [
-  'cat',
-  'dog',
-  'bunny',
-  'turtle',
-  'koala',
-  'elephant',
-  'hipo',
-  'bird',
-  'mamal'
-]; 
+	</head>
+	<body>
 
-function toaster($thing){
+		<h1>hello</h1>
 
-echo '<li>' . 'toasting ' . $thing . '.</li>';
+		<ul class= "row">
+			<?php while (have_posts()) : the_post(); ?>
+				<li class= "column">
+					<div class="card">
+						<h2 class="card-title"><?php the_title(); ?></h2>
+						<div class="card-image"><?php the_post_thumbnail();?></div>
+						<div class="card-content"><?php the_excerpt() ?></div>
+					</div>
+				</li>
+			<?php endwhile ?>
+		</ul>
 
-}
+	</body>
 
-echo '<ul>';
-foreach($animals as $animal){
-	toaster($animal);
-}
-echo '</ul>';
-
-
-?>
+</html>
